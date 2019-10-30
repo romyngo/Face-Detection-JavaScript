@@ -1,3 +1,4 @@
+const container = document.getElementById("container");
 const video = document.getElementById("video");
 const loader = document.getElementById("loading");
 
@@ -25,7 +26,7 @@ function startVideo() {
 
 video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
-  document.body.append(canvas);
+  container.appendChild(canvas);
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
   setInterval(async () => {

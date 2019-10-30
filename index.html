@@ -8,27 +8,29 @@
     <script defer src="face-api.min.js"></script>
     <script defer src="script.js"></script>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
       canvas {
         position: absolute;
+      }
+
+      #container {
+        position: relative;
+        display: flex;
+        justify-content: center;
       }
 
       #video {
         display: none;
       }
+
+      #loading {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <video id="video" width="720" height="560" autoplay muted></video>
-    <p id="loading">Wating for camera to load</p>
+    <div id="container">
+      <video id="video" width="300" height="300" autoplay muted></video>
+      <p id="loading">Wating for camera to load</p>
+    </div>
   </body>
 </html>
